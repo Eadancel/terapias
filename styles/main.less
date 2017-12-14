@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import "vars";
-
-*{
+ 
+*{ 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -43,7 +43,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 100vh; 
   position: relative;
   overflow: hidden;
   
@@ -55,7 +55,7 @@ h2 {
     bottom: 0;
     left: 0;
     background-color: @overlay;
-    opacity: 0.65;
+    opacity: 0.50;
     z-index: 2;
   }
 }
@@ -87,7 +87,7 @@ h2 {
     span {
       font-size: 38px;
       color: @accent;
-      text-transform: uppercase;
+      // text-transform: uppercase;
     }
   }
 }
@@ -125,21 +125,21 @@ h2 {
 
 .menu {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 80px;
   grid-column-gap: 40px;
   justify-content: space-between;
   position: relative;
-  
+  // background-color: @title-background;
   a{
-    color: white;
+    color: rgb(73, 73, 73);
     text-decoration: none;
     text-align: center;
     padding: 10px 0;
     margin: 10px 0;
     transition: border-bottom 0.3s ease-in-out;
     position: relative;
-    
+    // background-color: @title-background;
     &::before {
       content:'';
       position: absolute;
@@ -178,12 +178,16 @@ a.active, a.active:hover {
   grid-column-start: 1;
   grid-column-end: 3;
   align-items: center;
+  
 }
 
 .header__title span {
-  color: @accent;
+  color: @accent; 
 }
-
+.header__title h1 {
+  // color: @accent; 
+  background-color: @title-background;
+}
 .button, .footer__form .button {
   padding: 10px;
   display: inline-block;
@@ -325,7 +329,7 @@ a.active, a.active:hover {
 }
 
 .ourteam {
-  text-align: center;
+  text-align:left;
   background-color: @light-background;
 }
 
@@ -378,21 +382,21 @@ a.active, a.active:hover {
   font-size: 20px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  
+  text-align: center;
   a {
     padding: 0 5px;
-    color: @accent;
+    color: @button-text;
     transition: color 0.5s ease-in-out;
     
     &:hover {
-      color: darken(@accent, 20%);
+      color: darken(@button-text, 20%);
     }
   }
 }
 
 .ourteam__item:hover .ourteam__socials {
   opacity: 1;
-}
+}  
 
 footer {
   background: @footer-background;
@@ -660,6 +664,7 @@ footer {
   
   .ourteam__socials {
     opacity: 1;
+    text-align: center;
   }
   
   .footer__container {
