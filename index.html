@@ -11,14 +11,30 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- Font Awesome-->
   <script src="https://use.fontawesome.com/f28c2cb418.js"></script>
+  <script type="text/javascript" src="./lib/ultralb-master/ultralb.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="./lib/fullPage.js-master/jquery.fullPage.css" />
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
+  <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+  <!-- <script src="./lib/fullPage.js-master/vendors/jquery.easings.min.js"></script> -->
+  
+  
+  <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+  <!-- <script type="text/javascript" src="./lib/fullPage.js-master/vendors/scrolloverflow.min.js"></script> -->
+  
+  <script type="text/javascript" src="./lib/fullPage.js-master/jquery.fullPage.js"></script>
+
 </head>
 <body>
+
   
-  <header class="header"> 
-    <img src="./images/slide1.jpg" alt="" class="header__bg">
-    <div class="header__container container grid">
+  <div  class="nave"> 
+    <div class="menu__container container grid">
+      
       <div class="header__logo logo">
-        <a href="#">Terapias de <span>Bienestar</span></a>
+        <a href="#initial" data-menuanchor="initial">Terapias de <span>Bienestar</span></a>
       </div>
       <div class="header__menu grid">
         <a href="#" class="closed menu__trigger">
@@ -26,23 +42,29 @@
             <span></span>
             <span></span>
           </a>
-        <nav class="menu grid"> 
-          <a href="#" class="menu__item active">Muriel Lama</a>
-          <a href="#" class="menu__item">Talleres/Cursos</a>
-          <a href="#" class="menu__item">Galeria</a>
-          <a href="#" class="menu__item">Testimonios</a>
-          <a href="#" class="menu__item">Contacto</a>
+        <nav id="myMenu"  class="menu grid"> 
+          <a href="#about" data-menuanchor="about" class="menu__item active">Muriel Lama</a>
+          <a href="#cursos" data-menuanchor="cursos" class="menu__item">Talleres/Cursos</a>
+          <a href="#gallery" data-menuanchor="gallery" class="menu__item">Galeria</a>
+          
+          <a href="#testimonios" data-menuanchor="testimonios" class="menu__item">Testimonios</a>
+          <a href="#contacto" data-menuanchor="contacto" class="menu__item">Contacto</a>
         </nav>
       </div>
-      <div class="header__title"> 
-        <h1>Ven descubrir este mágico mundo de sanación y equilibrio que nos llevará al <span>Bienestar</span></h1>
-      </div>
-      <div class="header__button">
-        <a href="#" class="button">Contacto</a>
-      </div>
     </div>
+    </div>
+  </div>
+
+<div id="fullpage">
+  <header class="header section" data-anchor="initial"> 
+          <img src="./images/background2.png" alt="" class="header__bg"> 
+          <div class="header__containerTitle container grid">
+            <div class="header__title"> 
+              <h1>Ven descubrir este mágico mundo de sanación y equilibrio que nos llevará al <span>Bienestar</span></h1>
+            </div>
+          </div>
   </header>
-  <section class="about">
+  <section class="about section" data-anchor="about">
     <div class="about__container container grid">
       <div class="about__img">
       <img src="./images/muriel.jpg" alt="Muriel Lama">
@@ -50,8 +72,7 @@
     <div class="about__text">
       <h2>Muriel Lama</h2>
       <p>Maestra en Reiki, Terapeuta de Flores de Bach, Biomagnetismo y Meditación, Radiestesista, Músicoterapeuta, Cantante y Compositora. Durante más de 10 años se ha desarrollado como terapeuta 
-        tanto en Brasil como en Chile logrando excelentes y gratificantes resultados.
-</p>
+        tanto en Brasil como en Chile logrando excelentes y gratificantes resultados.</p>
       <p>Ha dedicado gran parte de su vida también a la música como cantante y compositora.</p>
       <div class="about__button">
         <a href="#" class="button">Contacto</a>
@@ -62,7 +83,7 @@
   
  
   
-  <section class="ourteam">
+  <section class="ourteam section" data-anchor="cursos">
     <div class="ourteam__title">
       <h2>Cursos/Talleres</h2>
     </div>
@@ -101,81 +122,81 @@
     </div>
   </section>
  
-  <section class="gallary grid">
-      <h2 class="gallary__title">Gallary</h2>
+  <section class="gallary grid section ultralb" data-anchor="gallery">
+      <h2 class="gallary__title">Galeria</h2>
       <div class="gallary__grid grid container">
         
           <div class="gallary__item">
-            <img src="http://res.cloudinary.com/alpis/image/upload/v1506005275/DSCN2316_dygasa.jpg" alt="">
+            <img src="./images/gallery/gallery1.jpg" alt="">
             <div class="gallary__item__description">
-              <h4>Greece</h4>
-              <p>By: Nadezhda Beloziorova</p>
+              <h4>Gallery Item 1</h4>
+              <p>By: Muriel Lama</p>
             </div>
           </div>
         
           <div class="gallary__item">
-            <img src="http://res.cloudinary.com/alpis/image/upload/v1506005275/z_47a1d9b6_yolseb.jpg" alt="">
+            <img src="./images/gallery/gallery2.jpg" alt="">
             <div class="gallary__item__description">
-              <h4>Kamennyye Mogily</h4>
-              <p>By: Nadezhda Beloziorova</p>
+              <h4>Gallery Item 2</h4>
+              <p>By: Muriel Lama</p>
             </div>
           </div>
         
           <div class="gallary__item">
-            <img src="http://res.cloudinary.com/alpis/image/upload/v1506005274/y_ec32b789_xfsdtg.jpg" alt="">
+            <img src="./images/gallery/gallery4.png" alt="">
             <div class="gallary__item__description">
-              <h4>Carpathians</h4>
-              <p>By: Nadezhda Beloziorova</p>
+              <h4>Gallery Item 4</h4>
+              <p>By: Muriel Lama</p>
             </div>
           </div>
         
           <div class="gallary__item">
-            <img src="http://res.cloudinary.com/alpis/image/upload/v1506005274/DSCN2459_skemmp.jpg" alt="">
+            <img src="./images/gallery/gallery3.jpg" alt="">
             <div class="gallary__item__description">
-              <h4>Greece</h4>
-              <p>By: Nadezhda Beloziorova</p>
+              <h4>Gallery Item 3</h4>
+              <p>By: Muriel Lama</p>
             </div>
           </div>
         
           <div class="gallary__item">
-            <img src="http://res.cloudinary.com/alpis/image/upload/v1506005275/DSCN2165_gpopvm.jpg" alt="">
+            <img src="./images/gallery/gallery5.jpg" alt="">
             <div class="gallary__item__description">
-              <h4>Greece</h4>
-              <p>By: Nadezhda Beloziorova</p>
+              <h4>Gallery Item 5</h4>
+              <p>By: Muriel Lama</p>
             </div>
           </div>
         
           <div class="gallary__item">
-            <img src="http://res.cloudinary.com/alpis/image/upload/v1506005273/y_b005d0bb_z8lriv.jpg" alt="">
+            <img src="./images/gallery/gallery6.jpg" alt="">
             <div class="gallary__item__description">
-              <h4>Belokuzminovka</h4>
-              <p>By: Nadezhda Beloziorova</p>
+              <h4>Gallery Item 6</h4>
+              <p>By: Muriel Lama</p>
+            </div>
+          </div> 
+        
+          <div class="gallary__item">
+            <img src="./images/gallery/gallery7.jpg" alt="">
+            <div class="gallary__item__description">
+              <h4>Galley Item 7</h4>
+              <p>By: Muriel Lama</p>
             </div>
           </div>
         
           <div class="gallary__item">
-            <img src="http://res.cloudinary.com/alpis/image/upload/v1506005274/JabvvNOXTFE_xc0m9l.jpg" alt="">
+            <img src="./images/gallery/gallery8.jpg" alt="">
             <div class="gallary__item__description">
-              <h4>Czech Republic</h4>
-              <p>By: Nadezhda Beloziorova</p>
+              <h4>Gallery Item 8</h4>
+              <p>By: Muriel Lama</p>
             </div>
           </div>
         
           <div class="gallary__item">
-            <img src="http://res.cloudinary.com/alpis/image/upload/v1506005273/u-H9FV40nag_scpgyf.jpg" alt="">
+            <img src="./images/gallery/gallery9.jpg" alt="">
             <div class="gallary__item__description">
-              <h4>Venice</h4>
-              <p>By: Nadezhda Beloziorova</p>
+              <h4>Galley Item 9 </h4>
+              <p>By: Muriel Lama</p>
             </div>
-          </div>
-        
-          <div class="gallary__item">
-            <img src="http://res.cloudinary.com/alpis/image/upload/v1506005274/GkAcic67zjA_edl40b.jpg" alt="">
-            <div class="gallary__item__description">
-              <h4>Alps</h4>
-              <p>By: Nadezhda Beloziorova</p>
-            </div>
-          </div>
+          </div> 
           
       </div>
       
@@ -185,8 +206,50 @@
      
     </section>
 
+    <section class="testi section grid fp-auto-height" data-anchor="testimonios">
+        <h2 class="testi__title">Testimonios</h2>
+      <div class="testi__wrapper">
+      <div  class="testi__container slide">
+          
+          <i class="fa fa-quote-left"></i>
+          <div class="testi__text">
+              Además de ser una persona excepcional y muy carismática, en su trabajo con población 
+              universitaria, Muriel Lama ha destacado enormemente con su gran empatía, comprensión y 
+              dedicación por ayudar a las personas. Todo esto no sólo desde su amplio conocimiento en 
+              terapias naturales, sino también ayudando a desarrollar en grupos, las  herramientas y 
+              estrategias necesarias para alcanzar estados de bienestar permanentes<br><br>
+              Muchísimas gracias por todo lo que nos entregas!
+          </div>
+          <div class="testi__author">
+              Pamela Pavat
+              Coordinadora de Consejería y Salud Estudiantil 
+              Universidad Central 
 
-  <footer class="footer">
+          </div>
+      </div>
+      <div  class="testi__container slide">
+          
+          <i class="fa fa-quote-left"></i>
+          <div class="testi__text">
+              Además de ser una persona excepcional y muy carismática, en su trabajo con población 
+              universitaria, Muriel Lama ha destacado enormemente con su gran empatía, comprensión y 
+              dedicación por ayudar a las personas. Todo esto no sólo desde su amplio conocimiento en 
+              terapias naturales, sino también ayudando a desarrollar en grupos, las  herramientas y 
+              estrategias necesarias para alcanzar estados de bienestar permanentes<br><br>
+              Muchísimas gracias por todo lo que nos entregas!
+          </div>
+          <div class="testi__author">
+              Pamela Pavat
+              Coordinadora de Consejería y Salud Estudiantil 
+              Universidad Central 
+
+          </div>
+      </div>
+    </div>
+    </section>
+
+
+  <footer class="footer section" data-anchor="contacto">
    <div class="footer__container grid container">
      <div class="footer__left grid">
       <div class="footer__logo logo">
@@ -210,10 +273,10 @@
     </div>
    </div>
   </footer>
-  
+</div>
   
   <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
   <script src="scripts/index.js"></script>
 </body>
 </html>

@@ -60,6 +60,30 @@ h2 {
   }
 }
 
+.nave {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // height: 100vh; 
+  position: fixed;
+  overflow: hidden;
+  z-index: 99;
+  // height: 100vh;
+  width: 100%;
+  &::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // background-color: @overlay;
+    opacity: 0.50;
+
+  }
+}
+
+
 .header__bg {
   position: absolute;
   width: 100%;
@@ -68,9 +92,18 @@ h2 {
   z-index: 1;
 }
 
-.header__container {
+.menu__container {
   height: 100%;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr;
+  // grid-gap: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.header__containerTitle {
+  height: 100%;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
   position: relative;
   z-index: 3;
@@ -80,6 +113,7 @@ h2 {
   font-size: 32px;
   padding: 20px;
   font-weight: bold;
+  background-color: @title-background;
   a {
     color: white;
     text-decoration: none;
@@ -94,6 +128,7 @@ h2 {
 
 .header__menu {
   padding: 20px;
+  background-color: @title-background;
 }
 
 .menu__trigger {
@@ -130,7 +165,7 @@ h2 {
   grid-column-gap: 40px;
   justify-content: space-between;
   position: relative;
-  // background-color: @title-background;
+  
   a{
     color: rgb(73, 73, 73);
     text-decoration: none;
@@ -178,7 +213,7 @@ a.active, a.active:hover {
   grid-column-start: 1;
   grid-column-end: 3;
   align-items: center;
-  
+  grid-row-start:2;
 }
 
 .header__title span {
@@ -251,7 +286,7 @@ a.active, a.active:hover {
 
 .gallary__title {
   padding: 0 10px;
-  margin: 50px 0;
+  margin: 100px 0 40px;
 }
 
 .gallary__grid {
@@ -344,8 +379,10 @@ a.active, a.active:hover {
 }
 
 .ourteam__item {
+  display:grid;
+  grid-template-rows: auto 82px  auto;
   background: white;
-  margin: 0 10px;
+  // margin: 0 10px;
   border: solid 3px;
   border-color: @light-background;
   transition: all 0.5s ease-in-out;
@@ -384,7 +421,7 @@ a.active, a.active:hover {
   transition: opacity 0.5s ease-in-out;
   text-align: center;
   a {
-    padding: 0 5px;
+    // padding: 0 5px;
     color: @button-text;
     transition: color 0.5s ease-in-out;
     
@@ -397,6 +434,42 @@ a.active, a.active:hover {
 .ourteam__item:hover .ourteam__socials {
   opacity: 1;
 }  
+
+
+.testi {
+  background: @light-background;
+  grid-template-rows: 120px 80px 240px 80px 120px;
+  grid-gap: 10px;
+  // padding: 50px 10px;
+  text-align: center;
+
+  i {
+    font-size: 32px;
+    // color:#e6e6e6;
+    margin-bottom: 20px;
+  }
+}
+.testi__container {
+  // grid-template-columns: repeat(2, 1fr);
+  // grid-gap: 30px;
+  padding: 0px 50px;
+}
+
+.testi__title {
+  // padding: 0 10px;
+  // margin: 100px 0 40px;
+  grid-row:2;
+}
+.testi__text{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 0px 33px;
+
+}
+.testi__wrapper{
+  grid-row:3;
+}
 
 footer {
   background: @footer-background;
@@ -601,7 +674,11 @@ footer {
     grid-template-columns: 2fr 1fr;
     grid-gap: 5px;
   }
-  
+  .menu__container {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 70px 1fr;
+    // grid-gap: 5px;
+  }
   .header__menu {
     justify-content: end;
   }
@@ -654,7 +731,7 @@ footer {
   }
   
   .ourteam__grid {
-    grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;
     grid-gap: 10px;
   }
   
