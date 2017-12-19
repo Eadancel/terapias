@@ -366,6 +366,7 @@ a.active, a.active:hover {
 .ourteam {
   text-align:left;
   background-color: @light-background;
+  
 }
 
 .ourteam__title {
@@ -376,6 +377,7 @@ a.active, a.active:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   padding-bottom: 50px;
+  
 }
 
 .ourteam__item {
@@ -384,12 +386,12 @@ a.active, a.active:hover {
   background: white;
   // margin: 0 10px;
   border: solid 3px;
-  border-color: @light-background;
-  transition: all 0.5s ease-in-out;
-  
-  &:hover {
-    border-color: @accent;
-  }
+  // border-color: @light-background;
+  // transition: all 0.5s ease-in-out;
+  border-color: @accent;
+  // &:hover {
+  //   border-color: @accent;
+  // }
 }
 
 
@@ -417,17 +419,18 @@ a.active, a.active:hover {
 .ourteam__socials {
   padding-bottom: 20px;
   font-size: 20px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  // opacity: 0;
+  // transition: opacity 0.5s ease-in-out;
   text-align: center;
   a {
     // padding: 0 5px;
-    color: @button-text;
-    transition: color 0.5s ease-in-out;
+    // color: @button-text;
+    color: darken(@button-text, 20%);
+    // transition: color 0.5s ease-in-out;
     
-    &:hover {
-      color: darken(@button-text, 20%);
-    }
+    // &:hover {
+      
+    // }
   }
 }
 
@@ -435,6 +438,47 @@ a.active, a.active:hover {
   opacity: 1;
 }  
 
+.modal__empresas{
+  text-align: left;
+  padding:10px;
+  h3 {
+    font-size: 32px;
+    text-align: center;
+    padding: 30px;
+  }
+  h2 {
+    font-size: 24px;
+    text-align: left;
+  }
+  li{
+    font-size: 16px;
+  }
+}
+.modal__grid{
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.modal__box {
+  display:grid;
+  grid-template-rows: 100px auto auto;
+  background: white;
+  border: solid 3px;
+  border-color: @accent;
+}
+
+.modal__title {
+  padding: 20px 10px;
+}
+
+.modal__text {
+  font-size: 16px;
+  padding: 10px 30px 20px;
+  line-height: 1.7;
+  span{
+    font-size: 12px;
+  }
+}
 
 .testi {
   background: @light-background;
@@ -669,7 +713,10 @@ footer {
   h2 {
     text-align: center;
   }
-  
+  .modal__grid{
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
   .header__container {
     grid-template-columns: 2fr 1fr;
     grid-gap: 5px;

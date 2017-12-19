@@ -324,10 +324,6 @@ a.active:hover::before {
   grid-template-rows: auto 82px  auto;
   background: white;
   border: solid 3px;
-  border-color: #E6F3E3;
-  transition: all 0.5s ease-in-out;
-}
-.ourteam__item:hover {
   border-color: #571950;
 }
 .ourteam__img {
@@ -350,19 +346,51 @@ a.active:hover::before {
 .ourteam__socials {
   padding-bottom: 20px;
   font-size: 20px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
   text-align: center;
 }
 .ourteam__socials a {
-  color: #FFFFFF;
-  transition: color 0.5s ease-in-out;
-}
-.ourteam__socials a:hover {
   color: #cccccc;
 }
 .ourteam__item:hover .ourteam__socials {
   opacity: 1;
+}
+.modal__empresas {
+  text-align: left;
+  padding: 10px;
+}
+.modal__empresas h3 {
+  font-size: 32px;
+  text-align: center;
+  padding: 30px;
+}
+.modal__empresas h2 {
+  font-size: 24px;
+  text-align: left;
+}
+.modal__empresas li {
+  font-size: 16px;
+}
+.modal__grid {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.modal__box {
+  display: grid;
+  grid-template-rows: 100px auto auto;
+  background: white;
+  border: solid 3px;
+  border-color: #571950;
+}
+.modal__title {
+  padding: 20px 10px;
+}
+.modal__text {
+  font-size: 16px;
+  padding: 10px 30px 20px;
+  line-height: 1.7;
+}
+.modal__text span {
+  font-size: 12px;
 }
 .testi {
   background: #E6F3E3;
@@ -556,6 +584,10 @@ footer {
 @media only screen and (max-width: 768px) {
   h2 {
     text-align: center;
+  }
+  .modal__grid {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
   }
   .header__container {
     grid-template-columns: 2fr 1fr;

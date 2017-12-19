@@ -16,7 +16,8 @@
   <link rel="stylesheet" type="text/css" href="./lib/fullPage.js-master/jquery.fullPage.css" />
   
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  
+  <link rel="stylesheet" href="./lib/animatedModal/demo/css/animate.min.css">
+
   <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
   <!-- <script src="./lib/fullPage.js-master/vendors/jquery.easings.min.js"></script> -->
   
@@ -25,6 +26,7 @@
   <!-- <script type="text/javascript" src="./lib/fullPage.js-master/vendors/scrolloverflow.min.js"></script> -->
   
   <script type="text/javascript" src="./lib/fullPage.js-master/jquery.fullPage.js"></script>
+  <script src="./lib/animatedModal/animatedModal.min.js"></script>
 
 </head>
 <body>
@@ -95,7 +97,59 @@
             Talleres de Meditación <br>
             Taller de Sonoterapia</p></div>
         <div class="ourteam__socials">
-            <a href="#" class="button">Contacto</a>
+
+            <a id="empresasModal" href="#animatedModalEmpresas" class="button">Mas Info</a>
+            <div id="animatedModalEmpresas">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+                <div class="close-animatedModalEmpresas"> 
+                    CLOSE 
+                </div>
+                    
+                <div class="modal-content">
+                  <div class="modal__empresas">
+                   <h3>Cursos</h3>
+                    <div class="modal__grid grid">      
+                        <div class="modal__box">
+                            <div class="modal__title">
+                              <h2>Capacitaciones y cursos para Empresas</h2>
+                              </div>
+                              <div class="ourteam__img"><img src="./images/taller1.jpg" alt=""></div>
+                              <div class="modal__text">                             
+                          <p>
+                            - Capacitaci&oacute;n BmS, Bienestar m&aacute;s Salud<br>
+                            - Talleres de Meditaci&oacute;n con Visualizaci&oacute;n potenciando pensamientos positivos<br>
+                            - Taller de Meditaci&oacute;n con t&eacute;cnicas de Auto sanaci&oacute;n, para mejorar la concentraci&oacute;n y disminuir el estr&eacute;s<br>
+                            - Taller de Sonoterapia y Meditaci&oacute;n que ayudan al equilibrio emocional mediante la frecuencia de los instrumentos.<br>
+                            - Pausas activas de 15 min a diferentes grupos con t&eacute;cnicas de respiraci&oacute;n,  meditaci&oacute;n,  visualizaciones y movilizaci&oacute;n corporal<br>
+                            - Curso de Reiki I, II y  III </p>
+                        </div>
+                      </div>
+                      <div class="modal__box">
+                        <div class="modal__title">
+                          <h2>Talleres y Cursos grupales</h2>
+                        </div>
+                        <div class="ourteam__img"><img src="./images/taller1.jpg" alt=""></div>
+                        <div class="modal__text">
+                          
+                          <p>- Curso de Reiki I, II y  III<br>
+                            - Meditaci&oacute;n. <span>Duraci&oacute;n: 50 min</span><br>
+                            - Meditaci&oacute;n con Visualizaciones para Cambiar el inconsciente con la Ley de Atracci&oacute;n. <span>Duraci&oacute;n: 50 min.</span><br>
+                            - Meditaci&oacute;n con Visualizaci&oacute;n para Alineaci&oacute;n de los Chakras. <span>Duraci&oacute;n: 50 min</span><br>
+                            - Alineaci&oacute;n de los Chakras atrav&eacute;s del Canto con Mantras y Meditaci&oacute;n con Visualizaci&oacute;n. <span>Duraci&oacute;n: 50 min</span><br>
+                            - Taller de T&eacute;cnicas para Bajar de Peso. <span>Duraci&oacute;n: 2 horas</span><br>
+                            - Taller de Autosanaci&oacute;n de Enfermedades. <span>Duraci&oacute;n: 2horas</span><br>
+                            - Taller de T&eacute;cnicas para Dejar de Fumar. <span>Duraci&oacute;n: 2 horas</span><br>
+                            - Ritual para Atraer la Abundancia Econ&oacute;mica. <span>Duraci&oacute;n: 2 horas</span><br>
+                            - Taller de La Ley de la Atracci&oacute;n, construyendo nuestro tablero y decretando  lo que queremos en nuestra vida. <span>Duraci&oacute;n 2 horas.</span></p>
+                          </div>
+                        <ul>
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
       </div>
       <div class="ourteam__item">
@@ -105,7 +159,19 @@
             Curso de Reiki I, II y  III <br>
             Meditación. Duración: 50 min</p></div>
         <div class="ourteam__socials">
-            <a href="#" class="button">Contacto</a>
+            <a id="cursosModal" href="#animatedModalCursos" class="button">Mas Info</a>
+            <div id="animatedModalCursos">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+                <div class="close-animatedModalCursos"> 
+                    CLOSE MODAL
+                </div>
+                    
+                <div class="modal-content">
+                          <!--Your modal content goes here-->
+                          
+                </div>
+            </div>
+
         </div>
       </div>
       <div class="ourteam__item">
@@ -116,7 +182,18 @@
           Terapias con Reiki
         </p></div>
         <div class="ourteam__socials">
-            <a href="#" class="button">Contacto</a>
+            <a id="terapiasModal" href="#animatedModalTerapias" class="button">Mas Info</a>
+            <div id="animatedModalTerapias">
+                <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+                <div class="close-animatedModalTerapias"> 
+                    CLOSE MODAL
+                </div>
+                    
+                <div class="modal-content">
+                          <!--Your modal content goes here-->
+                          MODAL TERAPIAS
+                </div>
+            </div>
         </div>
       </div>
     </div>
