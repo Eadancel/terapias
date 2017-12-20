@@ -69,7 +69,7 @@ h2 {
   overflow: hidden;
   z-index: 99;
   // height: 100vh;
-  width: 100%;
+  width: 100vw;
   &::before{
     content:"";
     position: absolute;
@@ -103,7 +103,7 @@ h2 {
 
 .header__containerTitle {
   height: 100%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
   grid-gap: 20px;
   position: relative;
   z-index: 3;
@@ -127,7 +127,7 @@ h2 {
 }
 
 .header__menu {
-  padding: 20px;
+  padding: 20px 20px 20px 0px;
   background-color: @title-background;
 }
 
@@ -226,7 +226,7 @@ a.active, a.active:hover {
 .button, .footer__form .button {
   padding: 10px;
   display: inline-block;
-  min-width: 170px;
+  // min-width: 170px;
   background: @accent;
   text-align: center;
   color: @button-text;
@@ -440,7 +440,7 @@ a.active, a.active:hover {
 
 .modal__empresas{
   text-align: left;
-  padding:10px;
+  // padding:10px;
   h3 {
     font-size: 32px;
     text-align: center;
@@ -722,7 +722,7 @@ footer {
     grid-gap: 5px;
   }
   .menu__container {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-template-rows: 70px 1fr;
     // grid-gap: 5px;
   }
@@ -741,7 +741,7 @@ footer {
     border-top: 3px solid @accent;
     
       a{
-        color: rgba(255,255,255,0.85);
+        color: rgb(49, 49, 49);
         font-size: 18px;
 
         &::before {
@@ -778,7 +778,7 @@ footer {
   }
   
   .ourteam__grid {
-    // grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
   
@@ -807,7 +807,7 @@ footer {
   
   .logo {
     font-size: 22px;
-    
+    padding : 20px 0px 0px 10px;
     a span {
       font-size: 24px;
     }

@@ -19,6 +19,26 @@ $(document).ready(function(){
 		slidesNavPosition: 'bottom',
   });
 
+  $("#biografiaModal").animatedModal({
+                modalTarget:'animatedModalBiografia',
+                animatedIn:'lightSpeedIn',
+                animatedOut:'bounceOutDown',
+                color:'#E6F3E3',
+                // Callbacks
+                beforeOpen: function() {
+                    console.log("The animation was called");
+                },           
+                afterOpen: function() {
+                    console.log("The animation is completed");
+                }, 
+                beforeClose: function() {
+                    console.log("The animation was called");
+                }, 
+                afterClose: function() {
+                    console.log("The animation is completed");
+                }
+            });
+
   $("#empresasModal").animatedModal({
                 modalTarget:'animatedModalEmpresas',
                 animatedIn:'lightSpeedIn',

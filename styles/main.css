@@ -58,7 +58,7 @@ h2 {
   position: fixed;
   overflow: hidden;
   z-index: 99;
-  width: 100%;
+  width: 100vw;
 }
 .nave::before {
   content: "";
@@ -85,7 +85,7 @@ h2 {
 }
 .header__containerTitle {
   height: 100%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
   grid-gap: 20px;
   position: relative;
   z-index: 3;
@@ -105,7 +105,7 @@ h2 {
   color: #571950;
 }
 .header__menu {
-  padding: 20px;
+  padding: 20px 20px 20px 0px;
   background-color: rgba(178, 207, 178, 0.7);
 }
 .menu__trigger {
@@ -193,7 +193,6 @@ a.active:hover::before {
 .footer__form .button {
   padding: 10px;
   display: inline-block;
-  min-width: 170px;
   background: #571950;
   text-align: center;
   color: #FFFFFF;
@@ -356,7 +355,6 @@ a.active:hover::before {
 }
 .modal__empresas {
   text-align: left;
-  padding: 10px;
 }
 .modal__empresas h3 {
   font-size: 32px;
@@ -594,7 +592,7 @@ footer {
     grid-gap: 5px;
   }
   .menu__container {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-template-rows: 70px 1fr;
   }
   .header__menu {
@@ -611,7 +609,7 @@ footer {
     border-top: 3px solid #571950;
   }
   .menu a {
-    color: rgba(255, 255, 255, 0.85);
+    color: #313131;
     font-size: 18px;
   }
   .menu a::before {
@@ -641,6 +639,7 @@ footer {
     text-align: center;
   }
   .ourteam__grid {
+    grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
   .ourteam__img img {
@@ -661,6 +660,7 @@ footer {
   }
   .logo {
     font-size: 22px;
+    padding: 20px 0px 0px 10px;
   }
   .logo a span {
     font-size: 24px;
