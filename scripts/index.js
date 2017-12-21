@@ -7,6 +7,18 @@ console.log("JavaScript is amazing!");
 
 $(document).ready(function(){
   
+    // Show Menu on Book
+    $(window).bind('scroll', function() {
+        var navHeight = $(window).height() - 500;
+        if ($(window).scrollTop() > navHeight) {
+            $('.logo').addClass('on');
+            $('.header__menu').addClass('on');
+        } else {
+            $('.logo').removeClass('on');
+            $('.header__menu').removeClass('on');
+        }
+    });
+
   $('#fullpage').fullpage({
     anchors: ['initial', 'about', 'cursos', 'gallery','testimonios', 'contacto'],
     menu: '#myMenu',

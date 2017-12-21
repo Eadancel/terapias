@@ -108,6 +108,9 @@ h2 {
   position: relative;
   z-index: 3;
 }
+.on{
+  background-color: @title-background-on !important;
+}
 
 .logo {
   font-size: 32px;
@@ -246,15 +249,32 @@ a.active, a.active:hover {
 
 .about {
   background: @light-background;
-  padding: 50px 0;
+  padding: 80px 0;
+}
+.about__footer{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  font-size: 22px;
+  h1{
+    background-color: @title-background;
+  }
+  span{
+    color: @accent;
+  }
 }
 
 .about__container {
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 50px;
+  grid-gap: 30px;
   padding: 20px;
 }
-
+.about_images{
+  display:block;
+}
+.about__inner{
+  display:none;
+}
 .about__img {
   padding: 10px;
   width: 100%;
@@ -771,6 +791,7 @@ footer {
   .about__container {
     grid-template-columns: 1fr; 
     grid-gap: 30px;
+    padding: 5px;
   }
   
   .about__button {
@@ -795,6 +816,25 @@ footer {
     grid-template-columns: 1fr;
   }
   
+  .about_images{
+    display:none;
+  }
+  .about__inner{
+    display:block;
+  }
+  .about__footer{
+    text-align: center;
+    font-size: 16px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    // h1{
+    //   background-color: @title-background;
+    // }
+    // span{
+    //   color: @accent;
+    // }
+  }
+
 }
 
 
