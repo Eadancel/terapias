@@ -299,6 +299,51 @@ a.active, a.active:hover {
   padding-top: 20px;
 }
 
+.terapias {
+  background: @light-background;
+  padding: 120px 0;
+}
+
+.terapias__container {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+.terapias__block{
+  border: solid 2px;
+  border-color: @accent;
+  // padding: 5px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: 
+    "tl image "
+    "fch image "
+    "desc desc ";
+}
+.terapias__title{
+  grid-area : tl;
+  h2{
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+}
+.terapias__ficha{
+  grid-area : fch;
+  font-size :13px;
+  padding:5px;
+}
+.terapias__img{
+  grid-area : image;
+  img {
+    width: 100%;
+  }
+}
+.terapias__descripcion{
+  grid-area : desc;
+  font-size :14px;
+  background-color:#ffffff;
+  padding:5px;
+}
 .gallary {
   grid-template-columns: 1fr;
   text-align: center;
@@ -798,6 +843,26 @@ footer {
     text-align: center;
   }
   
+  .terapias__container {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+  }
+
+  .terapias__block{
+    border: solid 2px;
+    border-color: @accent;
+    // padding: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas: 
+      "image "
+      "tl "
+      "fch"
+      "desc";
+  }
+
+
   .ourteam__grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
