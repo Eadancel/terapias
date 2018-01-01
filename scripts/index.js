@@ -28,7 +28,9 @@ $(document).ready(function(){
     // paddingTop: '100px',
     // verticalCentered: true,
     slidesNavigation: true,
-		slidesNavPosition: 'bottom',
+        slidesNavPosition: 'bottom',
+        controlArrows : true,
+        dragAndMove: "horizontal"
   });
 
   $("#biografiaModal").animatedModal({

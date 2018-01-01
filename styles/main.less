@@ -331,6 +331,10 @@ a.active, a.active:hover {
   grid-area : fch;
   font-size :13px;
   padding:5px;
+  span {
+    font-weight: bold;
+    font-size: 15px;
+  }
 }
 .terapias__img{
   grid-area : image;
@@ -343,6 +347,14 @@ a.active, a.active:hover {
   font-size :14px;
   background-color:#ffffff;
   padding:5px;
+  padding-left: 10px;
+  line-height: 1.5em;
+  .indent{
+    padding-left: 50px;
+  }
+  span{
+    font-size:11px;
+  }
 }
 .gallary {
   grid-template-columns: 1fr;
@@ -572,14 +584,16 @@ a.active, a.active:hover {
 .testi__text{
   font-size: 16px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 1.4em;
   padding: 0px 33px;
 
 }
 .testi__wrapper{
   grid-row:3;
 }
-
+.testi__author{
+  padding-top: 10px;
+}
 footer {
   background: @footer-background;
   grid-template-columns: repeat(2, 1fr);
@@ -606,7 +620,17 @@ footer {
     }
   }
 }
-
+.footer__bottom{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  img{
+    // width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto 0;
+  }
+}
 .footer__form {
   grid-template-columns: repeat(2,1fr);
   grid-gap: 30px;
@@ -862,7 +886,11 @@ footer {
       "desc";
   }
 
-
+  .terapias__descripcion{
+    .indent{
+      padding-left: 20px;
+    }
+  }
   .ourteam__grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
@@ -900,6 +928,34 @@ footer {
     // }
   }
 
+
+
+  .testi{
+    grid-template-rows: 80px 70px 400px 10px 80px
+  }
+  .testi__container{
+    padding: 0px
+  }
+  .testi__text{
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 1em;
+    padding: 5px ;
+  }
+  .fp-controlArrow.fp-prev{
+    left: 0px !important;
+    top : calc(100% ~"-" 55px);
+  }
+  .fp-controlArrow.fp-next{
+    right: 0px !important;
+    top : calc(100% ~"-" 55px);
+  }
+  .footer__bottom{
+    grid-column-end: 1;
+  }  
+  .footer__container{
+    padding:0px;
+  }
 }
 
 

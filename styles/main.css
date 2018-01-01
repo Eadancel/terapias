@@ -285,6 +285,10 @@ a.active:hover::before {
   font-size: 13px;
   padding: 5px;
 }
+.terapias__ficha span {
+  font-weight: bold;
+  font-size: 15px;
+}
 .terapias__img {
   grid-area: image;
 }
@@ -296,6 +300,14 @@ a.active:hover::before {
   font-size: 14px;
   background-color: #ffffff;
   padding: 5px;
+  padding-left: 10px;
+  line-height: 1.5em;
+}
+.terapias__descripcion .indent {
+  padding-left: 50px;
+}
+.terapias__descripcion span {
+  font-size: 11px;
 }
 .gallary {
   grid-template-columns: 1fr;
@@ -470,11 +482,14 @@ a.active:hover::before {
 .testi__text {
   font-size: 16px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 1.4em;
   padding: 0px 33px;
 }
 .testi__wrapper {
   grid-row: 3;
+}
+.testi__author {
+  padding-top: 10px;
 }
 footer {
   background: #c4e9c5;
@@ -498,6 +513,16 @@ footer {
 }
 .footer__socials a:hover {
   color: rgba(209, 227, 209, 0.7);
+}
+.footer__bottom {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+.footer__bottom img {
+  height: 100%;
+  object-fit: cover;
+  margin: auto 0;
 }
 .footer__form {
   grid-template-columns: repeat(2, 1fr);
@@ -712,6 +737,9 @@ footer {
     grid-template-rows: auto auto auto 1fr;
     grid-template-areas: "image " "tl " "fch" "desc";
   }
+  .terapias__descripcion .indent {
+    padding-left: 20px;
+  }
   .ourteam__grid {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
@@ -737,6 +765,32 @@ footer {
     font-size: 16px;
     grid-column-start: 1;
     grid-column-end: 1;
+  }
+  .testi {
+    grid-template-rows: 80px 70px 400px 10px 80px;
+  }
+  .testi__container {
+    padding: 0px;
+  }
+  .testi__text {
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 1em;
+    padding: 5px ;
+  }
+  .fp-controlArrow.fp-prev {
+    left: 0px !important;
+    top: calc(100% - 55px);
+  }
+  .fp-controlArrow.fp-next {
+    right: 0px !important;
+    top: calc(100% - 55px);
+  }
+  .footer__bottom {
+    grid-column-end: 1;
+  }
+  .footer__container {
+    padding: 0px;
   }
 }
 /* Extra Small Devices, Phones */
