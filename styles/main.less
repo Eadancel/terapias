@@ -363,7 +363,7 @@ a.active, a.active:hover {
 
 .gallary__title {
   padding: 0 10px;
-  margin: 100px 0 40px;
+  margin: 120px 0 40px;
 }
 
 .gallary__grid {
@@ -410,6 +410,26 @@ a.active, a.active:hover {
     grid-column-end: 3;
     grid-row: 4;
   }
+  &:nth-child(19) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    // grid-row: 4;
+  }
+  &:nth-child(27) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    // grid-row: 4;
+  }
+  &:nth-child(32) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    // grid-row: 4;
+  }
+  &:nth-child(33) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    // grid-row: 4;
+  }
 }
 
 .gallary__item__description {
@@ -447,7 +467,10 @@ a.active, a.active:hover {
 }
 
 .ourteam__title {
-  padding: 50px 10px;
+  // padding: 50px 10px;
+  padding-top: 120px;
+  padding-bottom: 0px;
+  text-align: center
 }
 
 .ourteam__grid {
@@ -579,7 +602,11 @@ a.active, a.active:hover {
 .testi__title {
   // padding: 0 10px;
   // margin: 100px 0 40px;
-  grid-row:2;
+  // grid-row:2
+  position: absolute;
+  top: 140px;
+  margin: 0 auto !important;
+  width: 100%;
 }
 .testi__text{
   font-size: 16px;
@@ -931,7 +958,15 @@ footer {
 
 
   .testi{
-    grid-template-rows: 80px 70px 400px 10px 80px
+    grid-template-rows: 80px 60px 420px 10px 80px;
+    grid-gap:0px;
+    i{
+      margin-bottom:10px;
+    }
+  }
+
+  .testi__title {
+    top:80px;
   }
   .testi__container{
     padding: 0px
@@ -944,11 +979,11 @@ footer {
   }
   .fp-controlArrow.fp-prev{
     left: 0px !important;
-    top : calc(100% ~"-" 55px);
+    top : calc(100% ~"-" 100px);
   }
   .fp-controlArrow.fp-next{
     right: 0px !important;
-    top : calc(100% ~"-" 55px);
+    top : calc(100% ~"-" 100px);
   }
   .footer__bottom{
     grid-column-end: 1;
