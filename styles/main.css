@@ -78,7 +78,7 @@ h2 {
 }
 .menu__container {
   height: 100%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 100px 1fr;
   position: relative;
   z-index: 3;
@@ -98,10 +98,23 @@ h2 {
   padding: 20px;
   font-weight: bold;
   background-color: rgba(178, 207, 178, 0.7);
+  text-align: center;
 }
 .logo a {
   color: white;
   text-decoration: none;
+}
+.footer [class*="fa fa-"] {
+  background-color: #3b5998;
+  border-radius: 30px;
+  color: #ffffff;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin: auto 3px;
+  width: 30px;
+  font-size: 15px;
+  text-align: center;
 }
 .logo a span {
   font-size: 38px;
@@ -134,9 +147,9 @@ h2 {
 }
 .menu {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 80px;
-  grid-column-gap: 40px;
+  grid-column-gap: 20px;
   justify-content: space-between;
   position: relative;
 }
@@ -196,9 +209,9 @@ a.active:hover::before {
 .footer__form .button {
   padding: 10px;
   display: inline-block;
-  background: #571950;
+  background: #b2cfb2;
   text-align: center;
-  color: #FFFFFF;
+  color: #000000;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
@@ -208,8 +221,8 @@ a.active:hover::before {
 }
 .button:hover,
 .footer__form .button:hover {
-  background: #43133e;
-  color: #f2f2f2;
+  background: #c9ebc9;
+  color: #000000;
 }
 .about {
   background: #E6F3E3;
@@ -413,7 +426,8 @@ a.active:hover::before {
   display: grid;
   grid-template-rows: auto 82px  auto;
   background: white;
-  border: solid 3px;
+  /* border: solid 3px; */
+  border:none;
   border-color: #571950;
 }
 .ourteam__img {
@@ -439,7 +453,7 @@ a.active:hover::before {
   text-align: center;
 }
 .ourteam__socials a {
-  color: #cccccc;
+  color: #000000;
 }
 .ourteam__item:hover .ourteam__socials {
   opacity: 1;
@@ -527,13 +541,13 @@ footer {
   padding: 50px 20px;
 }
 .footer__socials a {
-  font-size: 20px;
+  font-size: 40px;
   padding: 0 5px;
-  color: rgba(178, 207, 178, 0.7);
+  color: rgb(87, 25, 80);
   transition: color 0.5s ease-in-out;
 }
 .footer__socials a:hover {
-  color: rgba(209, 227, 209, 0.7);
+  color: rgb(87, 25, 80);
 }
 .footer__bottom {
   grid-column-start: 1;

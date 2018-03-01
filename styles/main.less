@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import "vars";
- 
-*{ 
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -43,10 +43,10 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh; 
+  height: 100vh;
   position: relative;
   overflow: hidden;
-  
+
   &::before{
     content:"";
     position: absolute;
@@ -64,7 +64,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // height: 100vh; 
+  // height: 100vh;
   position: fixed;
   overflow: hidden;
   z-index: 99;
@@ -94,7 +94,7 @@ h2 {
 
 .menu__container {
   height: 100%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 100px 1fr;
   // grid-gap: 20px;
   position: relative;
@@ -120,7 +120,7 @@ h2 {
   a {
     color: white;
     text-decoration: none;
-    
+
     span {
       font-size: 38px;
       color: @accent;
@@ -138,7 +138,7 @@ h2 {
   display: none;
   width: 45px;
   height: 45px;
-  position: relative; 
+  position: relative;
 
   span {
     width: 100%;
@@ -163,12 +163,12 @@ h2 {
 
 .menu {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: 80px;
-  grid-column-gap: 40px;
+  grid-column-gap: 20px;
   justify-content: space-between;
   position: relative;
-  
+
   a{
     color: rgb(73, 73, 73);
     text-decoration: none;
@@ -188,17 +188,17 @@ h2 {
       border-bottom: solid 2px #fff;
       transition: all 0.5s ease;
     }
-    
+
     &:hover::before{
     width: 100%;
     }
   }
 }
-  
+
 a.active, a.active:hover {
   border-bottom: solid 2px @accent;
   z-index: 2;
-  
+
   &::before {
       content:'';
       position: absolute;
@@ -220,17 +220,17 @@ a.active, a.active:hover {
 }
 
 .header__title span {
-  color: @accent; 
+  color: @accent;
 }
 .header__title h1 {
-  // color: @accent; 
+  // color: @accent;
   background-color: @title-background;
 }
 .button, .footer__form .button {
   padding: 10px;
   display: inline-block;
   // min-width: 170px;
-  background: @accent;
+  background:  #207e4a;
   text-align: center;
   color: @button-text;
   font-size: 20px;
@@ -238,11 +238,11 @@ a.active, a.active:hover {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  
+
   transition: all 0.5s ease-in-out;
-  
+
   &:hover {
-    background: darken(@accent, 5%);
+    background: #33c776;
     color: darken(@button-text, 5%);
   }
 }
@@ -280,7 +280,7 @@ a.active, a.active:hover {
   width: 100%;
   height:100%;
   overflow: hidden;
-  
+
   img {
     width: 100%;
   }
@@ -288,7 +288,7 @@ a.active, a.active:hover {
 
 .about__text {
   padding: 10px;
-  
+
   p{
     line-height: 1.7;
     margin: 40px 0 ;
@@ -315,7 +315,7 @@ a.active, a.active:hover {
   // padding: 5px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "tl image "
     "fch image "
     "desc desc ";
@@ -381,30 +381,30 @@ a.active, a.active:hover {
     height: 100%;
     object-fit: cover;
   }
-  
+
   &:nth-child(1) {
     grid-row-start: 1;
     grid-row-end: 3;
   }
-  
+
   &:nth-child(3) {
     grid-column-start: 3;
     grid-column-end: 5;
   }
-  
+
   &:nth-child(4) {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 4;
   }
-  
+
    &:nth-child(7) {
     grid-column: 4;
     grid-row-start: 3;
     grid-row-end: 5;
   }
-  
+
   &:nth-child(8) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -440,11 +440,11 @@ a.active, a.active:hover {
   background: rgba(44,107,49,0.7);
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  
+
   h4 {
     color: @accent;
   }
-  
+
   p {
     font-size: 14px;
     color: white;
@@ -463,7 +463,7 @@ a.active, a.active:hover {
 .ourteam {
   text-align:left;
   background-color: @light-background;
-  
+
 }
 
 .ourteam__title {
@@ -477,7 +477,7 @@ a.active, a.active:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   padding-bottom: 50px;
-  
+
 }
 
 .ourteam__item {
@@ -527,16 +527,16 @@ a.active, a.active:hover {
     // color: @button-text;
     color: darken(@button-text, 20%);
     // transition: color 0.5s ease-in-out;
-    
+
     // &:hover {
-      
+
     // }
   }
 }
 
 .ourteam__item:hover .ourteam__socials {
   opacity: 1;
-}  
+}
 
 .modal__empresas{
   text-align: left;
@@ -641,7 +641,7 @@ footer {
     padding: 0 5px;
     color: @form-background;
     transition: color 0.5s ease-in-out;
-    
+
     &:hover {
       color: lighten(@form-background, 10%);
     }
@@ -662,12 +662,12 @@ footer {
   grid-template-columns: repeat(2,1fr);
   grid-gap: 30px;
   text-align: center;
-  
+
   textarea, .footer__button {
     grid-column-start: 1;
     grid-column-end: 3;
   }
-  
+
   input[type="text"], input[type="email"], textarea {
     background: @form-background;
     padding: 15px;
@@ -675,22 +675,22 @@ footer {
     border: none;
     outline: solid 3px @form-background;
     transition: outline 0.5s ease;
-    
+
     &::placeholder {
       color:rgba(255,255,255,0.8);
       font-family: 'Open Sans', sans-serif;
     }
-    
+
     &:focus {
       outline: solid 3px @accent;
     }
   }
-  
+
   textarea {
     grid-row-start: 2;
     grid-row-end: 8;
   }
-  
+
   input[type="submit"]:focus {
     outline: none;
   }
@@ -711,7 +711,7 @@ footer {
   h1 {
     font-size: 42px;
   }
-  
+
   h2 {
     font-size: 22px;
   }
@@ -719,38 +719,38 @@ footer {
     grid-template-columns: 1fr 2fr;
     grid-gap: 5px;
   }
-  
+
   .menu__links {
     grid-column-gap: 10px;
   }
-  
+
   .logo {
     font-size: 30px;
-    
+
     a span {
       font-size: 34px;
     }
   }
-  
+
   .button, .footer__form .button {
     font-size: 18px;
   }
-  
+
   .about__text p {
     line-height: 1.4;
     margin: 15px 0;
     font-size: 14px;
   }
-  
+
   .gallary__grid {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, 200px);
   grid-gap: 5px;
   padding: 10px;
 }
-  
+
   .gallary__item {
-  
+
     &:nth-child(1) {
       grid-row-start: auto;
       grid-row-end: auto;
@@ -785,31 +785,31 @@ footer {
       grid-row: auto;
     }
   }
-  
+
   .ourteam__title {
     padding: 30px 10px;
   }
-  
+
   .ourteam__grid {
     grid-gap: 0;
   }
-  
+
   .ourteam__img {
     height: 160px;
   }
-  
+
   .ourteam__desctiption {
     padding: 0 10px 20px;
     line-height: 1.4;
   }
-  
+
   .footer {
     padding: 30px 10px;
   }
-  
+
   .footer__form {
   grid-template-columns: 1fr;
-    
+
     textarea, .footer__button {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -818,10 +818,10 @@ footer {
     textarea {
       grid-row-start: 3;
       grid-row-end: 8;
-    }  
+    }
   }
-  
-  
+
+
 }
 
 /* Small Devices, Tablets */
@@ -845,7 +845,7 @@ footer {
   .header__menu {
     justify-content: end;
   }
-  
+
   .menu {
     display: none;
     grid-template-columns: 1fr;
@@ -853,9 +853,9 @@ footer {
     top: 70px;
     left: 0;
     right: 0;
-    background: fade(@footer-background, 90%); 
+    background: fade(@footer-background, 90%);
     border-top: 3px solid @accent;
-    
+
       a{
         color: rgb(49, 49, 49);
         font-size: 18px;
@@ -869,7 +869,7 @@ footer {
         }
      }
   }
-  
+
   a.active, a.active:hover {
     color: @accent;
     border-bottom: none;
@@ -878,22 +878,22 @@ footer {
         border-bottom: none;
       }
   }
-  
+
   .menu__trigger {
     display: block;
     width: 45px;
   }
-  
+
   .about__container {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     grid-gap: 30px;
     padding: 5px;
   }
-  
+
   .about__button {
     text-align: center;
   }
-  
+
   .terapias__container {
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -906,7 +906,7 @@ footer {
     // padding: 5px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "image "
       "tl "
       "fch"
@@ -922,20 +922,20 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
-  
+
   .ourteam__img img {
     object-position: 50% 70%;
   }
-  
+
   .ourteam__socials {
     opacity: 1;
     text-align: center;
   }
-  
+
   .footer__container {
     grid-template-columns: 1fr;
   }
-  
+
   .about_images{
     display:none;
   }
@@ -987,7 +987,7 @@ footer {
   }
   .footer__bottom{
     grid-column-end: 1;
-  }  
+  }
   .footer__container{
     padding:0px;
   }
@@ -995,12 +995,12 @@ footer {
 
 
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
   h1 {
     font-size: 30px;
   }
-  
+
   .logo {
     font-size: 22px;
     padding : 20px 0px 0px 10px;
@@ -1008,12 +1008,12 @@ footer {
       font-size: 24px;
     }
   }
-  
+
   .gallary__grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, 200px);
   }
-  
+
   .gallary__item {
     &:nth-child(5) {
       grid-column-start: auto;
